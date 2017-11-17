@@ -138,6 +138,7 @@ void cGravityball::Destroy()
 		SAFE_DELETE(a);
 
 	SAFE_DELETE(m_pPlasma);
+	SAFE_DELETE(m_pPhysX);
 
 	cItem::Destroy();
 }

@@ -879,6 +879,7 @@ void InGameUI::Update()
 		RaceResults();
 		if (g_pKeyManager->isOnceKeyDown(VK_RETURN))
 		{
+			g_pItemManager->Destroy();
 			g_SceneManager->ChangeScene("Lobby");
 			*iLobby::m_gLobbyState = START_LOBBY;
 		}

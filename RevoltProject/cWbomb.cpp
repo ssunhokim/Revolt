@@ -145,6 +145,7 @@ void cWbomb::Create(D3DXVECTOR3 angle, D3DXVECTOR3 pos)
 void cWbomb::Destroy()
 {
 	SAFE_DELETE(m_pImapt);
+	SAFE_DELETE(m_pPhysX);
 
 	cItem::Destroy();
 }

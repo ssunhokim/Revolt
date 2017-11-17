@@ -132,6 +132,7 @@ void cMyBomb::Destroy()
 {
 	SAFE_DELETE(m_pImpact);
 	SAFE_DELETE(m_BombTime);
+	SAFE_DELETE(m_pPhysX);
 
 	cItem::Destroy();
 }

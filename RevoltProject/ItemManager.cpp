@@ -38,7 +38,6 @@ void ItemManager::Init()
 
 void ItemManager::Update()
 {
-
 	for (int i = 0; i < m_vecItem.size(); ++i)
 	{
 		m_vecItem[i]->Update();
@@ -190,9 +189,9 @@ void ItemManager::Destroy()
 {
 	for each(auto p in m_vecItem)
 	{
+		p->Destroy();
 		SAFE_DELETE(p);
 	}
+	m_vecItem.clear();
 
-	for (int i = 0;i < 4;i++)
-		m_vecIndex[i] = 0;
 }

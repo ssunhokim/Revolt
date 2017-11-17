@@ -188,6 +188,7 @@ void RacingScene::Update()
 	if (g_pKeyManager->isOnceKeyDown(VK_ESCAPE))
 	{
 		m_eRaceProg = RACE_PROG_FINISH;
+		g_pItemManager->Destroy();
 		g_SceneManager->ChangeScene("Lobby");
 	}
 

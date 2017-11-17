@@ -185,6 +185,7 @@ void cFirework::Destroy()
 {
 	SAFE_DELETE(m_pEffect);
 	SAFE_DELETE(m_pTail);
+	SAFE_DELETE(m_pPhysX);
 
 	cItem::Destroy();
 }
