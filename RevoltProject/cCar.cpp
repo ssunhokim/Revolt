@@ -243,7 +243,7 @@ void cCar::SetAI(bool isAI, AI_DATA aidata)
 {
 	m_isAI = isAI;
 
-	if (isAI)
+	//	if (isAI)
 	{
 
 		if (familyAI)
@@ -328,11 +328,14 @@ void cCar::Update()
 	if (m_isCtl)
 	{
 		if (m_isAI) CtrlAI();
-		else CtrlPlayer();
-		//if (g_pKeyManager->isStayKeyDown(VK_TAB))
-		//{
-		//	CtrlPlayer();
-		//}
+		else
+		{
+			if (g_pKeyManager->isStayKeyDown(VK_LSHIFT))
+			{
+				CtrlAI();
+			}
+			else	CtrlPlayer();
+		}
 		//이하 AI, PLAYER 의 동일 사용 함수
 
 		//자동차 움직임
@@ -367,6 +370,23 @@ void cCar::Update()
 	}
 
 	UpdateSound();
+
+	//치트
+	if (g_pKeyManager->isOnceKeyDown('1'))
+	{
+		m_eHoldItem = ITEM_WBOMB;
+		m_nItemCount = 1;
+	}
+	if (g_pKeyManager->isOnceKeyDown('2'))
+	{
+		m_eHoldItem = ITEM_MYBOMB;
+		m_nItemCount = 1;
+	}
+	if (g_pKeyManager->isOnceKeyDown('3'))
+	{
+		m_eHoldItem = ITEM_FAKEBOMB;
+		m_nItemCount = 1;
+	}
 }
 
 void cCar::LastUpdate()
@@ -410,7 +430,7 @@ void cCar::Render()
 		D3DXMatrixTranslation(&matT, NxWheelPos.x, NxWheelPos.y, NxWheelPos.z);
 
 		if (i < 2)	D3DXMatrixRotationY(&matR, -(D3DX_PI*0.5 + (m_wheelAngle * m_maxWheelAngle)));
-	
+
 		else D3DXMatrixRotationY(&matR, -D3DX_PI*0.5);
 
 		wheelRotAngle += GetRpm() *0.01;
@@ -420,14 +440,17 @@ void cCar::Render()
 		D3DXMatrixRotationX(&matR_, D3DXToRadian(wheelRotAngle));
 		matW = matR * matT;
 
-		MgrD3DDevice->SetTransform(D3DTS_WORLD, &(matR_ * matW * cTransform::GetMatrix(false,true,true)));
+		MgrD3DDevice->SetTransform(D3DTS_WORLD, &(matR_ * matW * cTransform::GetMatrix(false, true, true)));
 		vecWheels[i]->Render();
 	}
 
 
 	//if (m_isAI)
 	//{
-	if (familyAI) familyAI->Render();
+	if (g_pKeyManager->isStayKeyDown(VK_LSHIFT))
+	{
+		if (familyAI) familyAI->Render();
+	}
 	//}
 
 	if (m_pSkidMark)
