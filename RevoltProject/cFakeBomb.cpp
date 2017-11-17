@@ -7,6 +7,7 @@
 cFakeBomb::cFakeBomb()
 	: m_bombAngle(0.0f)
 	, m_bombTime(0.0f)
+	, m_isSound(false)
 {
 	cItem::cItem();
 }
@@ -49,6 +50,12 @@ void cFakeBomb::Update()
 		m_pImpact->SetPosition(pos);
 		m_isUse = false;
 		m_bombTime = 0.0f;
+
+		if (!m_isSound)
+		{
+			g_pSoundManager->Play("puttbang.wav", 0.8f, m_pPhysX->pPhysX->GetPositionToD3DXVec3());
+			m_isSound = true;
+		}
 	}
 
 	if (m_isUse && !m_pImpact->GetIsUse())

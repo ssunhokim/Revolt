@@ -12,6 +12,7 @@ private:
 	cFakeImpact* m_pImpact;
 	float m_bombTime;
 	float m_bombAngle;
+	bool m_isSound;
 public:
 	cFakeBomb();
 	virtual ~cFakeBomb();
