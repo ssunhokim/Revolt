@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC28E7A7-7F86-4401-94C6-5C5DBCF9CD21}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RevoltProject</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Samples\SampleCommonCode\src;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\NxCharacter\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\Cooking\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\PhysXLoader\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\Foundation\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\Physics\include;C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Graphics\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Bin\win32;C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Graphics\lib\win32;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Samples\SampleCommonCode\src;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\NxCharacter\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\Cooking\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\PhysXLoader\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\Foundation\include;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\Physics\include;C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Graphics\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Bin\win32;C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\Graphics\lib\win32;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Program Files %28x86%29\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <AdditionalDependencies>NxCooking.lib;PhysXLoader.lib;NxCharacter.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>NxCooking.lib;PhysXLoader.lib;NxCharacter.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+    <Text Include="버그 리포트.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="c321GO.h" />
+    <ClInclude Include="cAI.h" />
+    <ClInclude Include="cAI_Ctrl.h" />
+    <ClInclude Include="cAI_CtrlHandel.h" />
+    <ClInclude Include="cAI_CtrlSpeed.h" />
+    <ClInclude Include="cAI_CtrlFlip.h" />
+    <ClInclude Include="cAI_CtrlCompete.h" />
+    <ClInclude Include="cAI_CtrlUseItem.h" />
+    <ClInclude Include="cAI_Master.h" />
+    <ClInclude Include="cAI_Ray.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraManager.h" />
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="CarBox.h" />
+    <ClInclude Include="CarTextLoader.h" />
+    <ClInclude Include="cBillBoardEffect.h" />
+    <ClInclude Include="cCar.h" />
+    <ClInclude Include="cCheckBox.h" />
+    <ClInclude Include="cClient.h" />
+    <ClInclude Include="cCreateProfile.h" />
+    <ClInclude Include="cDataManager.h" />
+    <ClInclude Include="cFakeBomb.h" />
+    <ClInclude Include="cFakeImpact.h" />
+    <ClInclude Include="cFirework.h" />
+    <ClInclude Include="cFollowPoint.h" />
+    <ClInclude Include="cGravityball.h" />
+    <ClInclude Include="cImpact.h" />
+    <ClInclude Include="cIntroLob.h" />
+    <ClInclude Include="cItem.h" />
+    <ClInclude Include="cLight.h" />
+    <ClInclude Include="cMesh.h" />
+    <ClInclude Include="cMyBomb.h" />
+    <ClInclude Include="cMybombImapct.h" />
+    <ClInclude Include="cNetwork.h" />
+    <ClInclude Include="cNetworkInRoom.h" />
+    <ClInclude Include="cNetworkLobby.h" />
+    <ClInclude Include="cNetworkManager.h" />
+    <ClInclude Include="cPhysX.h" />
+    <ClInclude Include="cPhysXManager.h" />
+    <ClInclude Include="cPickUp.h" />
+    <ClInclude Include="cPlasmaImpact.h" />
+    <ClInclude Include="cPlayerData.h" />
+    <ClInclude Include="cSelectCarLob.h" />
+    <ClInclude Include="cSkidMark.h" />
+    <ClInclude Include="cSkyBox.h" />
+    <ClInclude Include="cStringUtil.h" />
+    <ClInclude Include="cStuff.h" />
+    <ClInclude Include="cTrack.h" />
+    <ClInclude Include="cTransform.h" />
+    <ClInclude Include="cViewCarLob.h" />
+    <ClInclude Include="cWaterBombImpact.h" />
+    <ClInclude Include="cWbomb.h" />
+    <ClInclude Include="cWheel.h" />
+    <ClInclude Include="DEBUG_RENDERER.h" />
+    <ClInclude Include="DeviceManager.h" />
+    <ClInclude Include="FontManager.h" />
+    <ClInclude Include="GameNode.h" />
+    <ClInclude Include="GravityBallImpact.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="iLobby.h" />
+    <ClInclude Include="InGameUI.h" />
+    <ClInclude Include="InlineFunction.h" />
+    <ClInclude Include="ItemManager.h" />
+    <ClInclude Include="KeyManager.h" />
+    <ClInclude Include="LightManager.h" />
+    <ClInclude Include="Lobby.h" />
+    <ClInclude Include="LobbyScene.h" />
+    <ClInclude Include="MacroFunction.h" />
+    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapLoader.h" />
+    <ClInclude Include="MtlTex.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectLoader.h" />
+    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="ObjectMap.h" />
+    <ClInclude Include="PFirework.h" />
+    <ClInclude Include="PhysX\cooking.h" />
+    <ClInclude Include="PhysX\NxAllVehicles.h" />
+    <ClInclude Include="PhysX\NxLinearInterpolate3Values.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PhysX\NxLinearInterpolationValues.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PhysX\NxVehicle.h" />
+    <ClInclude Include="PhysX\NxVehicleDesc.h" />
+    <ClInclude Include="PhysX\NxVehicleGearDesc.h" />
+    <ClInclude Include="PhysX\NxVehicleGears.h" />
+    <ClInclude Include="PhysX\NxVehicleMotor.h" />
+    <ClInclude Include="PhysX\NxVehicleMotorDesc.h" />
+    <ClInclude Include="PhysX\NxWheel.h" />
+    <ClInclude Include="PhysX\NxWheelDesc.h" />
+    <ClInclude Include="PickUpObject.h" />
+    <ClInclude Include="ProfileList.h" />
+    <ClInclude Include="PSystem.h" />
+    <ClInclude Include="Pyramid.h" />
+    <ClInclude Include="RacingScene.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RevoltProject.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SelectMap.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="StandardStructure.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextManager.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="Thing.h" />
+    <ClInclude Include="ThingManager.h" />
+    <ClInclude Include="TimeManager.h" />
+    <ClInclude Include="UIButton.h" />
+    <ClInclude Include="UIImageView.h" />
+    <ClInclude Include="UIObject.h" />
+    <ClInclude Include="UITextChating.h" />
+    <ClInclude Include="UITextImageView.h" />
+    <ClInclude Include="UITextView.h" />
+    <ClInclude Include="UserFileLoader.h" />
+    <ClInclude Include="UserStream.h" />
+    <ClInclude Include="WheelTire.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="c321GO.cpp" />
+    <ClCompile Include="cAI.cpp" />
+    <ClCompile Include="cAI_Ctrl.cpp" />
+    <ClCompile Include="cAI_CtrlHandel.cpp" />
+    <ClCompile Include="cAI_CtrlSpeed.cpp" />
+    <ClCompile Include="cAI_CtrlFlip.cpp" />
+    <ClCompile Include="cAI_CtrlCompete.cpp" />
+    <ClCompile Include="cAI_CtrlUseItem.cpp" />
+    <ClCompile Include="cAI_Master.cpp" />
+    <ClCompile Include="cAI_Ray.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraManager.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="CarBox.cpp" />
+    <ClCompile Include="CarTextLoader.cpp" />
+    <ClCompile Include="cBillBoardEffect.cpp" />
+    <ClCompile Include="cCar.cpp" />
+    <ClCompile Include="cCheckBox.cpp" />
+    <ClCompile Include="cClient.cpp" />
+    <ClCompile Include="cCreateProfile.cpp" />
+    <ClCompile Include="cDataManager.cpp" />
+    <ClCompile Include="cFakeBomb.cpp" />
+    <ClCompile Include="cFakeImpact.cpp" />
+    <ClCompile Include="cFirework.cpp" />
+    <ClCompile Include="cFollowPoint.cpp" />
+    <ClCompile Include="cGravityball.cpp" />
+    <ClCompile Include="cImpact.cpp" />
+    <ClCompile Include="cIntroLob.cpp" />
+    <ClCompile Include="cItem.cpp" />
+    <ClCompile Include="cLight.cpp" />
+    <ClCompile Include="cMesh.cpp" />
+    <ClCompile Include="cMyBomb.cpp" />
+    <ClCompile Include="cMybombImapct.cpp" />
+    <ClCompile Include="cNetwork.cpp" />
+    <ClCompile Include="cNetworkInRoom.cpp" />
+    <ClCompile Include="cNetworkLobby.cpp" />
+    <ClCompile Include="cNetworkManager.cpp" />
+    <ClCompile Include="cPhysX.cpp" />
+    <ClCompile Include="cPhysXManager.cpp" />
+    <ClCompile Include="cPickUp.cpp" />
+    <ClCompile Include="cPlasmaImpact.cpp" />
+    <ClCompile Include="cPlayerData.cpp" />
+    <ClCompile Include="cSelectCarLob.cpp" />
+    <ClCompile Include="cSkidMark.cpp" />
+    <ClCompile Include="cSkyBox.cpp" />
+    <ClCompile Include="cStringUtil.cpp" />
+    <ClCompile Include="cStuff.cpp" />
+    <ClCompile Include="cTrack.cpp" />
+    <ClCompile Include="cTransform.cpp" />
+    <ClCompile Include="cViewCarLob.cpp" />
+    <ClCompile Include="cWaterBombImpact.cpp" />
+    <ClCompile Include="cWbomb.cpp" />
+    <ClCompile Include="cWheel.cpp" />
+    <ClCompile Include="DEBUG_RENDERER.cpp" />
+    <ClCompile Include="DeviceManager.cpp" />
+    <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="GameNode.cpp" />
+    <ClCompile Include="GravityBallImpact.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="iLobby.cpp" />
+    <ClCompile Include="InGameUI.cpp" />
+    <ClCompile Include="ItemManager.cpp" />
+    <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="LightManager.cpp" />
+    <ClCompile Include="Lobby.cpp" />
+    <ClCompile Include="LobbyScene.cpp" />
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapLoader.cpp" />
+    <ClCompile Include="MtlTex.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ObjectLoader.cpp" />
+    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="ObjectMap.cpp" />
+    <ClCompile Include="PFirework.cpp" />
+    <ClCompile Include="PhysX\cooking.cpp" />
+    <ClCompile Include="PhysX\NxAllVehicles.cpp" />
+    <ClCompile Include="PhysX\NxVehicle.cpp" />
+    <ClCompile Include="PhysX\NxWheel.cpp" />
+    <ClCompile Include="PickUpObject.cpp" />
+    <ClCompile Include="ProfileList.cpp" />
+    <ClCompile Include="PSystem.cpp" />
+    <ClCompile Include="Pyramid.cpp" />
+    <ClCompile Include="RacingScene.cpp" />
+    <ClCompile Include="RevoltProject.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SelectMap.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TextManager.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="Thing.cpp" />
+    <ClCompile Include="ThingManager.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="UIButton.cpp" />
+    <ClCompile Include="UIImageView.cpp" />
+    <ClCompile Include="UIObject.cpp" />
+    <ClCompile Include="UITextChating.cpp" />
+    <ClCompile Include="UITextImageView.cpp" />
+    <ClCompile Include="UITextView.cpp" />
+    <ClCompile Include="UserFileLoader.cpp" />
+    <ClCompile Include="UserStream.cpp" />
+    <ClCompile Include="WheelTire.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RevoltProject.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="RevoltProject.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
